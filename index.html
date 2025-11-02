@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutu Store - Moda Moderna</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="img/testelogo.png" alt="Tutu Store Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="feminino.html">Feminino</a></li>
+                    <li><a href="masculino.html">Masculino</a></li>
+                    <li><a href="plus-size.html">Plus Size</a></li>
+                </ul>
+            </nav>
+            <button class="cart-button" id="open-cart-btn" aria-label="Abrir Carrinho">
+                <i data-feather="shopping-bag"></i>
+                <span class="cart-counter" id="cart-counter">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="carousel-container">
+            <div class="carousel-slide active" style="background-image: url('img/Moda\ para.png');">
+                
+            </div>
+            <div class="carousel-slide" style="background-image: url('https://placehold.co/1200x500/D4BBA5/222?text=SALE+30%25+OFF');">
+                <h2>Até 30% OFF</h2>
+                <p>Peças selecionadas em promoção</p>
+            </div>
+            <button class="carousel-control prev">&lt;</button>
+            <button class="carousel-control next">&gt;</button>
+        </section>
+
+        <section class="popular-categories">
+            <div class="container">
+                <h2>Categorias Populares</h2>
+                <div class="category-grid">
+                    <a href="feminino.html?filter=vestido" class="category-card" style="background-image: url('https://placehold.co/400x300/F0F0F0/333?text=Vestidos');">
+                        <h3>Calça Wid Leg</h3>
+                    </a>
+                    <a href="feminino.html?filter=camiseta" class="category-card" style="background-image: url('https://placehold.co/400x300/F0F0F0/333?text=Camisetas');">
+                        <h3>Croppt</h3>
+                    </a>
+                    <a href="masculino.html?filter=bermuda" class="category-card" style="background-image: url('https://placehold.co/400x300/F0F0F0/333?text=Bermudas');">
+                        <h3>camiseta caneladas</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products bg-light">
+            <div class="container">
+                <h2>Destaques Femininos</h2>
+                <div class="product-grid" id="featured-feminino">
+                    </div>
+                <a href="feminino.html" class="btn-secondary">Ver Todos</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Destaques Masculinos</h2>
+                <div class="product-grid" id="featured-masculino">
+                    </div>
+                <a href="masculino.html" class="btn-secondary">Ver Todos</a>
+            </div>
+        </section>
+
+        <section class="our-info bg-light">
+            <div class="container">
+                <h2>Como Comprar na Tutu Store</h2>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <i data-feather="map-pin"></i>
+                        <h4>Entregas em SP</h4>
+                        <p>Entregamos presencialmente nas principais estações de metrô/trem.</p>
+                    </div>
+                    <div class="info-box">
+                        <i data-feather="send"></i>
+                        <h4>Uber Moto</h4>
+                        <p>Receba no conforto da sua casa. Consulte a taxa para seu bairro.</p>
+                    </div>
+                    <div class="info-box">
+                        <i data-feather="credit-card"></i>
+                        <h4>Pagamentos</h4>
+                        <p>Aceitamos PIX, Cartão de Crédito (link) e Débito (presencial).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="featured-products">
+            <div class="container">
+                <h2>Destaques Plus Size</h2>
+                <div class="product-grid" id="featured-plus-size">
+                    </div>
+                <a href="plus-size.html" class="btn-secondary">Ver Todos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-copy">&copy; 2025 Tutu Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal-backdrop"></div>
+    <div id="product-modal" class="modal">
+        <button id="modal-close-btn" class="modal-close">&times;</button>
+        <div id="modal-content">
+            </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <button id="cart-close-btn" class="modal-close">&times;</button>
+        <h2>Meu Carrinho</h2>
+        <div id="cart-items-list">
+            </div>
+        <div class="cart-summary">
+            <strong>Total de Itens: <span id="cart-total-items">0</span></strong>
+        </div>
+        <button id="whatsapp-checkout-btn" class="btn-whatsapp-full">
+            <i data-feather="message-circle"></i> Finalizar Pedido via WhatsApp
+        </button>
+    </div>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        feather.replace(); // Ativa os ícones
+    </script>
+</body>
+</html>
